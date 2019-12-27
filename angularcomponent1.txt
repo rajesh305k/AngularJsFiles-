@@ -1,0 +1,94 @@
+first of all we need to create 
+export class to use externally in another files 
+
+export class ServerComponent {
+
+
+}
+
+
+
+
+we need to add component to it 
+
+@Component()
+export class ServerComponent {
+
+}
+
+but ts doesn't recognise it we need to import 
+
+
+import  { Component } from '@angular/core';
+@Component()
+export class ServerComponent {
+
+}
+
+
+need to select properties in the component 
+ 
+
+
+import {Component} from '@angular/core';//typescript will recognize component 
+@Component({
+
+selector:' ',//very unique id which no one should have 
+template:[''],
+templateUrl:'',//it consists of html file location('./server.component.html')
+styleUrl:[''],
+styling:['']
+
+})
+
+export class ServerComponent {
+
+}
+
+
+*******
+we have success fully created ServerComponent.ts file 
+but we need to add it in module file to work 
+
+go to app.module.ts 
+
+all import components 
+//we need to import component 
+@NgModule({
+
+declarations: [AppComponent,ServerComponent
+],
+imports: [
+
+]
+providers:[],
+bootstrap : [AppComponent]
+
+})
+export class AppModule{}
+
+//declarations, imports , providers, bootstrap are the properties 
+here ngmodule is an class declaration 
+
+//bootstrap tells angular which component should this be aware of 
+when application starts {recognize in index.html file }
+// won't touch bootstrap array still we need to add it 
+// so go to declarations and add new component "ServerComponent"
+//angular does'nt scan everything we need to tell it explicitly 
+
+this is all done typescript 
+servercomponent is not known to typescript 
+so we need to import
+** import {ServerComponent } from'./server/server.component';
+
+
+
+
+
+
+
+
+
+
+
+

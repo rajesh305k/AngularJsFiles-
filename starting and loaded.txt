@@ -1,0 +1,44 @@
+starting angular application 
+
+
+first code which gets executed main.ts (main type script file)
+checks we are in the production mode or not 
+** platformBrowserDynamic().bootstrapModuel(AppModule);
+
+**bootstrap starts angular application by passing AppModule to the method 
+this goes to 
+app.module.ts 
+
+bootstarp array 
+bootstrap :[AppComponent](it tells to angular )
+
+process 
+
+first goes to main.ts 
+second goes to app.module.ts 
+third analizes bootstrap:[AppModule] array tells angular what is 
+App Module it directs to 
+fourth goes to app.component.*;
+five goes to app.component.html;
+
+
+
+---------------------------
+index.html
+1st 
+<app-root> Loading ...<app-root> (components of own )
+
+
+angular finds the app-root 
+goes to the following files 
+app.component.css
+app.component.html
+app.component.spec
+app.component.ts
+
+
+
+then finds app-root in app.component.ts file 
+
+then goes to the app.component.html 
+pastes the exact 
